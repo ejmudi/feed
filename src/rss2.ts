@@ -157,8 +157,8 @@ export default (ins: Feed) => {
     if (Array.isArray(entry.author)) {
       item.author = [];
       entry.author.map((author: Author) => {
-        if (author.email && author.name) {
-          item.author.push({ _text: author.email + " (" + author.name + ")" });
+        if (author.name) {
+          item.author.push({ _text: author.name });
         }
       });
     }
